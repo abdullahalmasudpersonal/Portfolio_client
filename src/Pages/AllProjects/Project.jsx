@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { faCircleInfo, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect } from "react";
 import "./Project.css";
@@ -11,6 +11,7 @@ const Project = ({ project }) => {
     Aos.init({ duration: 2000 });
   }, []);
   const {
+    _id,
     porject_img1,
     porject_img2,
     porject_img3,
@@ -59,7 +60,7 @@ const Project = ({ project }) => {
         </div>
 
         <div className=" projects-projects-dev">
-          <h5 className=" mt-3">{porject_name}</h5>
+          <h5 className="mt-3"> <a href={porject_live_link} rel="noreferrer" target="_blank" style={{textDecoration:'none',color:'white'}}>{porject_name} <FontAwesomeIcon icon={faEye} style={{fontSize:'15px'}} /> </a></h5>
           <p className=" ">{porject_title}</p>
           <div className="">
             <small>
@@ -75,10 +76,10 @@ const Project = ({ project }) => {
 
         <div className="p-2 projects-projects-dev ">
           <small className="d-flex justify-content-end live_client_server_btn">
-            <a href={porject_live_link} rel="noreferrer" target="_blank">
+            <a href={`/projects/${_id}`} rel="noreferrer" target="_blank">
               {" "}
               <button className="project-live-btn">
-                <FontAwesomeIcon icon={faEye} /> Live Preview
+                <FontAwesomeIcon icon={faCircleInfo} /> Details
               </button>
             </a>
             <a href={porject_client_side} target="_blank" rel="noreferrer">

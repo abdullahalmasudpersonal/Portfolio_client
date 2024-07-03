@@ -10,6 +10,7 @@ import AllProjects from "./Pages/AllProjects/AllProjects";
 import Header from "./Pages/Shared/Header/Header";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Login from "./Pages/Amin/Login/Login";
+import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
 
 function App() {
   const location = useLocation();
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/allblogs" element={<AllBlogs />} />
         <Route path="/allprojects" element={<AllProjects />} />
+        <Route path="/projects/:id" element={<ProjectDetails />} />
         <Route path="/admin-dashboard" element={<AdminLayout />}>
           <Route index element={<Admin />} />
           <Route path="create-project" element={<CreateProject />} />

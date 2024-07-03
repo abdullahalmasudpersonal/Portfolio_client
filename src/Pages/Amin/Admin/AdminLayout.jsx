@@ -4,7 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 const AdminLayout = () => {
   return (
     <>
-      <div className="">
+      <>
         <div className="dashboardTopBar">
           <h4
             style={{ color: "white", textAlign: "center", paddingTop: "12px" }}
@@ -12,7 +12,7 @@ const AdminLayout = () => {
             Admin Dashboard
           </h4>
         </div>
-        <div className=" px-0">
+        <div className="px-0">
           <div className="dashboard">
             <div className="dashboard-dev1">
               <Link to="/admin-dashboard">
@@ -31,7 +31,7 @@ const AdminLayout = () => {
             <Outlet />
           </div>
         </div>
-      </div>
+      </>
     </>
   );
 };
