@@ -11,13 +11,16 @@ const CreateBlog = () => {
         image: data.image,
         description: data.description,
       };
-      fetch("http://localhost:5000/api/blogs/create-blog", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(newBlog),
-      })
+      fetch(
+        "https://portfolio-server-two-beta.vercel.app/api/blogs/create-blog",
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newBlog),
+        }
+      )
         .then((res) => res.json())
         .then((inserted) => {
           if (inserted?.data?._id) {

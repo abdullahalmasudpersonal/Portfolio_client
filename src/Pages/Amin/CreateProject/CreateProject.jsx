@@ -33,13 +33,16 @@ const CreateProject = () => {
         porject_img2: data.porject_img2,
         porject_img3: data.porject_img3,
       };
-      fetch("http://localhost:5000/api/projects/create-project", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(newProject),
-      })
+      fetch(
+        "https://portfolio-server-two-beta.vercel.app/api/projects/create-project",
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newProject),
+        }
+      )
         .then((res) => res.json())
         .then((inserted) => {
           if (inserted?.data?._id) {

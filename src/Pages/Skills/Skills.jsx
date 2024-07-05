@@ -5,7 +5,7 @@ import Aos from "aos";
 const Skills = () => {
   const [skills, setSkills] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/skills")
+    fetch("https://portfolio-server-two-beta.vercel.app/api/skills")
       .then((res) => res.json())
       .then((data) => setSkills(data));
   });

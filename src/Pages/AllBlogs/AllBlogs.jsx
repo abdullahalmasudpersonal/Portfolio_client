@@ -5,7 +5,7 @@ const AllBlogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/blogs")
+    fetch("https://portfolio-server-two-beta.vercel.app/api/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
