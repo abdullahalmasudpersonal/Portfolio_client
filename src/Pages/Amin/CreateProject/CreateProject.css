@@ -1,20 +1,20 @@
-
-.createProject{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
+.createProject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
 }
-.createProjectDev{
-    height: 800px;
-    width: 500px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+.createProjectDev {
+  height: 860px;
+  width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-.createProjectForm{
-    padding: 30px;
+.createProjectForm {
+  padding: 30px;
 }
-.createProjectForm>input{
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 20px;
+.createProjectForm > input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 20px;
 }

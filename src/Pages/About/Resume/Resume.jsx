@@ -81,6 +81,22 @@ const Resume = () => {
               <h3 className="mb-4">Professional Training</h3>
 
               <div data-aos="zoom-in-right" className="resume-item">
+                <h5 className="text-uppercase">Next Label Web Development</h5>
+                <h5 className="my-3">Nov 2023 - May 2024</h5>
+                <p>
+                  <em>
+                    Programming Hero, Level-4, 34, Awal Centre, Banani, Dhaka
+                  </em>{" "}
+                </p>
+                <p>
+                  To be an expect employee and intend to work in a challenging
+                  and competitive Environment in an organizational position
+                  entrusted with higher responsibility and strategies decision
+                  making authority, motivated self-driven creative.
+                </p>
+              </div>
+
+              <div data-aos="zoom-in-right" className="resume-item">
                 <h5 className="text-uppercase">
                   Complete Web Development Course with Jhankar Mahbub
                 </h5>

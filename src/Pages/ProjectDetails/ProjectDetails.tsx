@@ -1,38 +1,40 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import UseProjectDeatils from '../../Hooks/UseProjectDetails';
-import PageTitle from '../Shared/PageTitle/PageTitle';
-import './ProductDetails.css'
-import { Carousel } from 'react-responsive-carousel';
+import React from "react";
+import { useParams } from "react-router-dom";
+import UseProjectDeatils from "../../Hooks/UseProjectDetails";
+import PageTitle from "../Shared/PageTitle/PageTitle";
+import "./ProductDetails.css";
+import { Carousel } from "react-responsive-carousel";
 
-const ProjectDetails = ({ }) => {
-    const { id: projectId } = useParams();
-    const [projectDetails] = UseProjectDeatils([projectId])
+const ProjectDetails = ({}) => {
+  const { id: projectId } = useParams();
+  const [projectDetails] = UseProjectDeatils([projectId]);
 
-   // const porject_img1, porject_img2, porject_img3  = projectDetails?.data
+  // const {} = projectDetails?.data;
 
-   console.log(projectDetails?.data);
+  // const porject_img1, porject_img2, porject_img3  = projectDetails?.data
 
-    return (
-        <div className='productDetail'>
-            {/*  <PageTitle pageTitle={`${name}`} /> */}
-            <div className='productDetailDev'>
-                <div className='productDetailDevFrist'>
-                    {/* <Carousel className='text-center pro-detail-casual'>
-                        <div>
-                            <img src={porject_img1} />
-                        </div>
-                        <div>
-                            <img src={porject_img2} />
-                        </div>
-                        <div>
-                            <img src={porject_img3} />
-                        </div>
-                    </Carousel> */}
-                </div>
+  console.log("sdfk;ljhsd", projectDetails?.data?.porject_img1);
 
-                <div className='productDetailDevSecond'>
-                    {/*          <p className='mb-0'>{category}</p>
+  return (
+    <div className="productDetail">
+      {/*  <PageTitle pageTitle={`${name}`} /> */}
+      <div className="productDetailDev">
+        <div className="productDetailDevFrist">
+          <Carousel className="text-center pro-detail-casual">
+            <div>
+              <img src={projectDetails?.data?.porject_img1} />
+            </div>
+            <div>
+              <img src={projectDetails?.data?.porject_img2} />
+            </div>
+            <div>
+              <img src={projectDetails?.data?.porject_img3} />
+            </div>
+          </Carousel>
+        </div>
+
+        <div className="productDetailDevSecond">
+          {/*          <p className='mb-0'>{category}</p>
                     <h4 className='mb-2'>{name}</h4>
                     <p className=' mb-0'>
                         <small>4.5 </small>
@@ -45,7 +47,7 @@ const ProjectDetails = ({ }) => {
                         <small>&nbsp; <span data-bs-toggle="modal" data-bs-target="#writeAReview" className='review-btn'>Write a review</span></small>
                         <CreateReview productDetails={productDetails} />
                     </p> */}
-                    {/* <p className='product-dev-p pt-2'>
+          {/* <p className='product-dev-p pt-2'>
                         {
                             productDetails.offerPrice ?
                                 <h4>
@@ -59,8 +61,8 @@ const ProjectDetails = ({ }) => {
                         }
                     </p> */}
 
-                    <div className='attar-detail-dev-table'>
-                        {/*    <div className='d-flex '>
+          <div className="attar-detail-dev-table">
+            {/*    <div className='d-flex '>
                             <div className="">
                                 <p>Brand:</p>
                                 <p>Weight:</p>
@@ -72,11 +74,11 @@ const ProjectDetails = ({ }) => {
                                 <p>{availableQuantity} Pcs</p>
                             </div>
                         </div> */}
-                    </div>
+          </div>
 
-                    <div className='mt-3'>
-                        <p className='mb-2'>Quantity:</p>
-                        {/*   <div className='attar-detail-quantity-counter'>
+          <div className="mt-3">
+            <p className="mb-2">Quantity:</p>
+            {/*   <div className='attar-detail-quantity-counter'>
                             <div className='attar-detail-quantity-counter-p'>
                                 <p style={{ color: 'gray' }} className='m-0 fw-bold'> {count} </p>
                             </div>
@@ -89,8 +91,8 @@ const ProjectDetails = ({ }) => {
                                 </button>
                             </div>
                         </div> */}
-                    </div>
-                    {/*   {
+          </div>
+          {/*   {
                         availableQuantity < 1 ?
                             <div className='mt-4'><button className='outOfStock-btn' disabled>Out Of Stock</button></div>
                             :
@@ -100,10 +102,10 @@ const ProjectDetails = ({ }) => {
                                  <button className='add-to-cart' onClick={() => handleAddToCard(productDetails)}>Add to Cart</button> 
                             </div>
                     } */}
-                </div>
-            </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default ProjectDetails;

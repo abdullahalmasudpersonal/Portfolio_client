@@ -11,6 +11,13 @@ import Header from "./Pages/Shared/Header/Header";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Login from "./Pages/Amin/Login/Login";
 import ProjectDetails from "./Pages/ProjectDetails/ProjectDetails";
+import { ToastContainer } from "react-toastify";
+/* Tostify */
+import "react-toastify/dist/ReactToastify.css";
+import CreateBlog from "./Pages/Amin/CreateBlog/CreateBlog";
+/* slick-carousel */
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   const location = useLocation();
@@ -18,6 +25,7 @@ function App() {
     "/login",
     "/admin-dashboard",
     "/admin-dashboard/create-project",
+    "/admin-dashboard/create-blog",
   ];
 
   const shouldHideNavAndFooter = hideNavAndFooterPaths.includes(
@@ -34,10 +42,23 @@ function App() {
         <Route path="/admin-dashboard" element={<AdminLayout />}>
           <Route index element={<Admin />} />
           <Route path="create-project" element={<CreateProject />} />
+          <Route path="create-blog" element={<CreateBlog />} />
         </Route>
         <Route path="login" element={<Login />} />
       </Routes>
       {!shouldHideNavAndFooter && <Footer />}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   );
 }

@@ -28,13 +28,17 @@ const About = () => {
           ABOUT
         </h3>
 
-        <p className="about-about-info pt-5 m-0" data-aos="fade-right">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. And more recently with
-          desktop publishing software like Aldus PageMaker including versions of
-          Lorem Ipsum.
+        <p
+          className="about-about-info pt-5 m-0"
+          style={{ textAlign: "center" }}
+          data-aos="fade-right"
+        >
+          The goal of my life as a career is to become a high quality web
+          developer. At this early stage of my career, my goal is to work in a
+          web development company in Bangladesh. One of the goals of my life is
+          to take my skills and qualifications to a unique level by acquiring
+          knowledge about different types of technology by spending extra time
+          besides work.
         </p>
 
         <div className="row">
@@ -52,9 +56,9 @@ const About = () => {
                 Full Stack Developer & Web Desiginer
               </h4>
               <p data-aos="fade-up-right" className="pt-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Looking for a strong web developer position in a dynamic and
+                progressive company where my multitasking skills and ability to
+                meet deadlines effectively will be fully utilized.
               </p>
               <div className="row">
                 <div data-aos="fade-down" className="col-sm-6">
@@ -121,13 +125,11 @@ const About = () => {
                 </div>
               </div>
               <p data-aos="fade-down" className="pt-2">
-                Officiis eligendi itaque labore et dolorum mollitia officiis
-                optio vero. Quisquam sunt adipisci omnis et ut. Nulla
-                accusantium dolor incidunt officia tempore. Et eius omnis.
-                Cupiditate ut dicta maxime officiis quidem quia. Sed et
-                consectetur qui quia repellendus itaque neque. Aliquid amet
-                quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis
-                culpa magni laudantium dolores.
+                I am looking for clear role and set of responsibilities.
+                Consistent feedback from management. Team members I can learn
+                from. A company with a good growth trajectory. Learn new things
+                and develop my skills. Challenging problems to work on. A
+                diverse team.
               </p>
             </div>
           </div>

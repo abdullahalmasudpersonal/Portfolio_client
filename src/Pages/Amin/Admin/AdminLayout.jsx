@@ -21,6 +21,9 @@ const AdminLayout = () => {
               <Link to="/admin-dashboard/create-project">
                 <button>Create Project</button>
               </Link>
+              <Link to="/admin-dashboard/create-blog">
+                <button>Create Blog</button>
+              </Link>
               <Link to="/dashboard/myOrders">
                 <button>My Orders</button>
               </Link>
