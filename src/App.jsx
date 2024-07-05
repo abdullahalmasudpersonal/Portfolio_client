@@ -15,6 +15,7 @@ import { ToastContainer } from "react-toastify";
 /* Tostify */
 import "react-toastify/dist/ReactToastify.css";
 import CreateBlog from "./Pages/Amin/CreateBlog/CreateBlog";
+import CreateSkills from "./Pages/Amin/CreateSkills/CreateSkills";
 /* slick-carousel */
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -26,6 +27,7 @@ function App() {
     "/admin-dashboard",
     "/admin-dashboard/create-project",
     "/admin-dashboard/create-blog",
+    "/admin-dashboard/create-skill",
   ];
 
   const shouldHideNavAndFooter = hideNavAndFooterPaths.includes(
@@ -43,6 +45,7 @@ function App() {
           <Route index element={<Admin />} />
           <Route path="create-project" element={<CreateProject />} />
           <Route path="create-blog" element={<CreateBlog />} />
+          <Route path="create-skill" element={<CreateSkills />} />
         </Route>
         <Route path="login" element={<Login />} />
       </Routes>
