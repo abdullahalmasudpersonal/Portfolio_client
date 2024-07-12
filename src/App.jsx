@@ -16,6 +16,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CreateBlog from "./Pages/Amin/CreateBlog/CreateBlog";
 import CreateSkills from "./Pages/Amin/CreateSkills/CreateSkills";
+import ProtectedRoute from "./Pages/Shared/ProtectedRoute";
 /* slick-carousel */
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -41,7 +42,14 @@ function App() {
         <Route path="/allblogs" element={<AllBlogs />} />
         <Route path="/allprojects" element={<AllProjects />} />
         <Route path="/projects/:id" element={<ProjectDetails />} />
-        <Route path="/admin-dashboard" element={<AdminLayout />}>
+        <Route
+          path="/admin-dashboard"
+          element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
           <Route index element={<Admin />} />
           <Route path="create-project" element={<CreateProject />} />
           <Route path="create-blog" element={<CreateBlog />} />
