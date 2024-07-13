@@ -17,6 +17,7 @@ import "react-toastify/dist/ReactToastify.css";
 import CreateBlog from "./Pages/Amin/CreateBlog/CreateBlog";
 import CreateSkills from "./Pages/Amin/CreateSkills/CreateSkills";
 import ProtectedRoute from "./Pages/Shared/ProtectedRoute";
+import Projects from "./Pages/Amin/Projects/Projects";
 /* slick-carousel */
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -26,7 +27,8 @@ function App() {
   const hideNavAndFooterPaths = [
     "/login",
     "/admin-dashboard",
-    "/admin-dashboard/create-project",
+    "/admin-dashboard/projects",
+    "/admin-dashboard/projects/create-project",
     "/admin-dashboard/create-blog",
     "/admin-dashboard/create-skill",
   ];
@@ -51,7 +53,8 @@ function App() {
           }
         >
           <Route index element={<Admin />} />
-          <Route path="create-project" element={<CreateProject />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="projects/create-project" element={<CreateProject />} />
           <Route path="create-blog" element={<CreateBlog />} />
           <Route path="create-skill" element={<CreateSkills />} />
         </Route>

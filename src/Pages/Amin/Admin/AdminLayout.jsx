@@ -26,7 +26,10 @@ const AdminLayout = () => {
               <Link to="/admin-dashboard">
                 <button>Dashboard</button>
               </Link>
-              <Link to="/admin-dashboard/create-project">
+              <Link to="/admin-dashboard/projects">
+                <button>Project</button>
+              </Link>
+              <Link to="/admin-dashboard/projects/create-project">
                 <button>Create Project</button>
               </Link>
               <Link to="/admin-dashboard/create-blog">

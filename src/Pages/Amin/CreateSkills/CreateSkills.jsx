@@ -38,7 +38,7 @@ const CreateSkills = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="createProjectForm">
           <input
             name="pName"
-            placeholder="Blog Name"
+            placeholder="Skill Name"
             {...register("title", { required: true })}
             required
           />
