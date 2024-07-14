@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import TextEditor from "../Blogs/TextEditor";
 
 const CreateBlog = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -34,8 +35,12 @@ const CreateBlog = () => {
   };
 
   return (
-    <div className="createProject">
-      <div className="createProjectDev">
+    <div>
+      <h1>React Quill Editor with Vite</h1>
+      <TextEditor />
+   
+    {/* <div className="createProject">
+     <div className="createProjectDev">
         <h3 className="text-center mt-3">Create Blog</h3>
         <form onSubmit={handleSubmit(onSubmit)} className="createProjectForm">
           <input
@@ -58,7 +63,8 @@ const CreateBlog = () => {
           />
           <input name="" type="submit" required />
         </form>
-      </div>
+      </div> 
+    </div> */}
     </div>
   );
 };
