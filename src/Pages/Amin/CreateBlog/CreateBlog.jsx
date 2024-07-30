@@ -1,8 +1,14 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import TextEditor from "../Blogs/TextEditor";
+import ReactQuill from "react-quill";
+import { useState } from "react";
 
 const CreateBlog = () => {
+  const [editorContent, setEditorContent] = useState("");
+
+  const handleChange = (content) => {
+    setEditorContent(content);
+  };
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
     const proseed = window.confirm(`Are you sure Create New Blog ?`);
@@ -10,7 +16,7 @@ const CreateBlog = () => {
       const newBlog = {
         name: data.name,
         image: data.image,
-        description: data.description,
+        description: editorContent,
       };
       fetch(
         "https://portfolio-server-two-beta.vercel.app/api/blogs/create-blog",
@@ -37,34 +43,41 @@ const CreateBlog = () => {
   return (
     <div>
       <h1>React Quill Editor with Vite</h1>
-      <TextEditor />
-   
-    {/* <div className="createProject">
-     <div className="createProjectDev">
-        <h3 className="text-center mt-3">Create Blog</h3>
-        <form onSubmit={handleSubmit(onSubmit)} className="createProjectForm">
-          <input
-            name="pName"
-            placeholder="Blog Name"
-            {...register("name", { required: true })}
-            required
-          />
-          <input
-            name="pTitle"
-            placeholder="Project Title"
-            {...register("image", { required: true })}
-            required
-          />
-          <input
-            name="pLiveLink"
-            placeholder="Project Live Link"
-            required
-            {...register("description", { required: true })}
-          />
-          <input name="" type="submit" required />
-        </form>
-      </div> 
-    </div> */}
+
+      {/* <form onSubmit={handleSubmit(onSubmit)}>
+        <TextEditor register={register} />
+      </form> */}
+      <div className="createProject">
+        <div className="createProjectDev">
+          <h3 className="text-center mt-3">Create Blog</h3>
+          <form onSubmit={handleSubmit(onSubmit)} className="createProjectForm">
+            <input
+              name="pName"
+              placeholder="Blog Name"
+              {...register("name", { required: true })}
+              required
+            />
+            <input
+              name="blogImage"
+              placeholder="Blog Image"
+              {...register("image", { required: true })}
+              required
+            />
+            {/*  <input
+              name="description"
+              placeholder="Project Details"
+              required
+              {...register("description", { required: true })}
+            /> */}
+            <ReactQuill
+              value={editorContent}
+              onChange={handleChange}
+              theme="snow"
+            />
+            <input name="" type="submit" required />
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
